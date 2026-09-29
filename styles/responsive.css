@@ -1,0 +1,91 @@
+body {
+  background-color: var(--background);
+}
+
+@media (max-width: 64rem) {
+  :root {
+    --text-xl: 2rem;
+    --text-lg: 1.5rem;
+  }
+
+  header.top {
+    padding: 1.25rem 1.5rem;
+  }
+
+  section.hero {
+    --word-height: 2.5rem;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    padding: 1rem 1.5rem 2rem;
+  }
+
+  section.hero > div:first-child {
+    width: 100%;
+    max-width: 30.5rem;
+    min-width: 0;
+  }
+
+  section.hero > div:nth-child(2) {
+    height: auto;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+  }
+
+  section.hero > div:nth-child(2) img[src*="stars-1"] {
+    width: 18%;
+  }
+
+  section.hero > div:nth-child(2) img[src*="stars-2"] {
+    width: 8.2%;
+  }
+
+  section.hero .buttons {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  section.hero .button.buy {
+    max-width: 100%;
+    padding-inline: clamp(1.5rem, 10vw, 3rem);
+    white-space: nowrap;
+  }
+
+  section.gallery {
+    padding: 0 1.5rem 1.5rem;
+  }
+
+  section.gallery .content {
+    grid-template-areas: "A" "B" "C" "D";
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  section.gallery figure {
+    /* Keep the photos fully visible on touch devices. */
+    animation: none;
+  }
+
+  section.gallery figure > img {
+    height: auto;
+    aspect-ratio: 312 / 256;
+    object-fit: cover;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 3rem 1.5rem 1.5rem;
+  }
+
+  footer nav {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  footer .social-links {
+    margin-left: -.5rem;
+  }
+}
